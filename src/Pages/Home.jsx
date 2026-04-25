@@ -13,6 +13,7 @@ import {
     ArrowRight,
     Stethoscope,
 } from "lucide-react";
+import Navbar from "../components/Navbar";
 
 export default function PharmaSafeHomePage() {
     const cards = [
@@ -86,52 +87,7 @@ export default function PharmaSafeHomePage() {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 text-slate-800">
-            {/* Navbar */}
-            <nav className="sticky top-0 z-50 border-b border-slate-200 bg-white/80 backdrop-blur-md">
-                <div className="max-w-7xl mx-auto px-4 md:px-6 py-4 flex items-center justify-between">
-                    {/* Logo */}
-                    <div className="flex items-center gap-3">
-                        <div className="h-11 w-11 rounded-2xl bg-gradient-to-r from-blue-600 to-emerald-500 flex items-center justify-center shadow-lg">
-                            <Stethoscope className="text-white w-5 h-5" />
-                        </div>
-                        <div>
-                            <h1 className="font-bold text-xl">PharmaSafe</h1>
-                            <p className="text-xs text-slate-500">AI Medication Safety</p>
-                        </div>
-                    </div>
-
-                    {/* Menu */}
-                    <div className="hidden lg:flex items-center gap-7 text-sm font-medium">
-                        {[
-                            "Home",
-                            "Scan Prescription",
-                            "History",
-                            "DDI Checker",
-                            "Alternatives",
-                            "Profile",
-                        ].map((item) => (
-                            <button
-                                key={item}
-                                className="hover:text-blue-600 transition"
-                            >
-                                {item}
-                            </button>
-                        ))}
-                    </div>
-
-                    {/* Right */}
-                    <div className="flex items-center gap-3">
-                        <button className="relative p-2 rounded-xl hover:bg-slate-100 transition">
-                            <Bell className="w-5 h-5" />
-                            <span className="absolute top-1 right-1 h-2 w-2 rounded-full bg-red-500"></span>
-                        </button>
-
-                        <div className="h-10 w-10 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500 flex items-center justify-center text-white shadow">
-                            <User className="w-5 h-5" />
-                        </div>
-                    </div>
-                </div>
-            </nav>
+            <Navbar />
 
             {/* Hero */}
             <section className="max-w-7xl mx-auto px-4 md:px-6 pt-12 pb-10">
